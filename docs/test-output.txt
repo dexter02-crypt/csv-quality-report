@@ -1,0 +1,23 @@
+test_alternate_delimiter (test_csv_inspector.CsvTests.test_alternate_delimiter) ... ok
+test_bad_encoding_rejected (test_csv_inspector.CsvTests.test_bad_encoding_rejected) ... ok
+test_blank_records_skipped (test_csv_inspector.CsvTests.test_blank_records_skipped) ... ok
+test_header_only_is_valid (test_csv_inspector.CsvTests.test_header_only_is_valid) ... ok
+test_html_escapes_cells_and_column_names (test_csv_inspector.CsvTests.test_html_escapes_cells_and_column_names) ... ok
+test_input_limits (test_csv_inspector.CsvTests.test_input_limits) ... ok
+test_input_unchanged_and_cli (test_csv_inspector.CsvTests.test_input_unchanged_and_cli) ... ok
+test_invalid_delimiter (test_csv_inspector.CsvTests.test_invalid_delimiter) ... ok
+test_invalid_headers (test_csv_inspector.CsvTests.test_invalid_headers) ... ok
+test_missing_is_only_empty (test_csv_inspector.CsvTests.test_missing_is_only_empty) ... ok
+test_nonfinite_and_expression_are_not_numbers (test_csv_inspector.CsvTests.test_nonfinite_and_expression_are_not_numbers) ... ok
+test_numeric_summary_and_zero (test_csv_inspector.CsvTests.test_numeric_summary_and_zero) ... ok
+test_output_round_trip_and_no_overwrite (test_csv_inspector.CsvTests.test_output_round_trip_and_no_overwrite) ... ok
+test_quoted_comma_and_newline (test_csv_inspector.CsvTests.test_quoted_comma_and_newline) ... ok
+test_ragged_and_malformed (test_csv_inspector.CsvTests.test_ragged_and_malformed) ... ok
+test_sample_expected_metrics (test_csv_inspector.CsvTests.test_sample_expected_metrics) ... ok
+test_utf8_bom_and_unicode (test_csv_inspector.CsvTests.test_utf8_bom_and_unicode) ... ok
+test_whitespace_and_duplicate_semantics (test_csv_inspector.CsvTests.test_whitespace_and_duplicate_semantics) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.730s
+
+OK

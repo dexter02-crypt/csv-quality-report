@@ -1,0 +1,13 @@
+order_id,region,product,quantity,unit_price,order_date
+1001,North,Notebook,3,120.00,2026-09-01
+1002,South,Pen,10,20.00,2026-09-01
+1003,West,Backpack,1,950.00,2026-09-02
+1004,North,Notebook,2,120.00,2026-09-02
+1005,,Pen,5,20.00,2026-09-03
+1006,East,Bottle,,350.00,2026-09-03
+1007,South,Notebook,4,,2026-09-04
+1008,West,Backpack,2,950.00,2026-09-04
+1009,East,Bottle,1,350.00,
+1010,North,Pen,8,20.00,2026-09-05
+1011,South,Bottle,2,350.00,2026-09-05
+1011,South,Bottle,2,350.00,2026-09-05

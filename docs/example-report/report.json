@@ -1,0 +1,167 @@
+{
+  "source_name": "orders.csv",
+  "rows": 12,
+  "column_count": 6,
+  "missing_cells": 4,
+  "duplicate_rows_after_first": 1,
+  "blank_records_skipped": 0,
+  "columns": [
+    {
+      "name": "order_id",
+      "kind": "numeric",
+      "missing": 0,
+      "missing_percent": 0.0,
+      "distinct_nonempty": 11,
+      "numeric_values": 12,
+      "top_values": [
+        {
+          "value": "1011",
+          "count": 2
+        },
+        {
+          "value": "1001",
+          "count": 1
+        },
+        {
+          "value": "1002",
+          "count": 1
+        }
+      ],
+      "numeric_summary": {
+        "min": "1001",
+        "max": "1011",
+        "mean": "1006.4167"
+      }
+    },
+    {
+      "name": "region",
+      "kind": "text/mixed",
+      "missing": 1,
+      "missing_percent": 8.33,
+      "distinct_nonempty": 4,
+      "numeric_values": 0,
+      "top_values": [
+        {
+          "value": "South",
+          "count": 4
+        },
+        {
+          "value": "North",
+          "count": 3
+        },
+        {
+          "value": "West",
+          "count": 2
+        }
+      ],
+      "numeric_summary": null
+    },
+    {
+      "name": "product",
+      "kind": "text/mixed",
+      "missing": 0,
+      "missing_percent": 0.0,
+      "distinct_nonempty": 4,
+      "numeric_values": 0,
+      "top_values": [
+        {
+          "value": "Bottle",
+          "count": 4
+        },
+        {
+          "value": "Notebook",
+          "count": 3
+        },
+        {
+          "value": "Pen",
+          "count": 3
+        }
+      ],
+      "numeric_summary": null
+    },
+    {
+      "name": "quantity",
+      "kind": "numeric",
+      "missing": 1,
+      "missing_percent": 8.33,
+      "distinct_nonempty": 7,
+      "numeric_values": 11,
+      "top_values": [
+        {
+          "value": "2",
+          "count": 4
+        },
+        {
+          "value": "1",
+          "count": 2
+        },
+        {
+          "value": "3",
+          "count": 1
+        }
+      ],
+      "numeric_summary": {
+        "min": "1",
+        "max": "10",
+        "mean": "3.6363636"
+      }
+    },
+    {
+      "name": "unit_price",
+      "kind": "numeric",
+      "missing": 1,
+      "missing_percent": 8.33,
+      "distinct_nonempty": 4,
+      "numeric_values": 11,
+      "top_values": [
+        {
+          "value": "350.00",
+          "count": 4
+        },
+        {
+          "value": "20.00",
+          "count": 3
+        },
+        {
+          "value": "120.00",
+          "count": 2
+        }
+      ],
+      "numeric_summary": {
+        "min": "20.00",
+        "max": "950.00",
+        "mean": "327.27273"
+      }
+    },
+    {
+      "name": "order_date",
+      "kind": "text/mixed",
+      "missing": 1,
+      "missing_percent": 8.33,
+      "distinct_nonempty": 5,
+      "numeric_values": 0,
+      "top_values": [
+        {
+          "value": "2026-09-05",
+          "count": 3
+        },
+        {
+          "value": "2026-09-01",
+          "count": 2
+        },
+        {
+          "value": "2026-09-02",
+          "count": 2
+        }
+      ],
+      "numeric_summary": null
+    }
+  ],
+  "notes": [
+    "Whitespace around fields is stripped for all statistics and duplicate checks.",
+    "Only empty/whitespace-only fields are missing; NA, null, zero, and False are not missing.",
+    "Numeric types are suggestions, not schemas; identifiers with leading zeros may look numeric.",
+    "Numeric means use Decimal precision 34 and are rounded to 8 significant digits.",
+    "Reports include column names and top values. Treat reports as potentially sensitive."
+  ]
+}

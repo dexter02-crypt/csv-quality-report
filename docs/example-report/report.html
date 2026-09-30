@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>CSV Quality Report · orders.csv</title><style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172739;background:#f1f5f8}
+*{box-sizing:border-box}body{margin:0}main{max-width:1180px;margin:auto;padding:42px 28px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#426779}
+h1{font-size:42px;letter-spacing:-.04em;margin:8px 0 12px}h2{font-size:22px;margin:32px 0 14px}
+p{line-height:1.65}.muted{color:#526674}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:30px 0}
+.card{background:white;border:1px solid #dce5e9;border-radius:14px;padding:20px}.card strong{display:block;font-size:32px;margin-top:8px}
+.card span{font-size:13px;color:#526674}.table-wrap{overflow-x:auto;border:1px solid #dce5e9;border-radius:14px;background:white}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:16px 14px;border-bottom:1px solid #e8eef1;vertical-align:top;font-size:14px}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;background:#e8eff3}tr:last-child td{border-bottom:0}
+.name{font-weight:700;overflow-wrap:anywhere;max-width:230px}.tag{display:inline-block;padding:4px 8px;border-radius:6px;background:#e9f2f5;font-size:12px;white-space:nowrap}
+.warning{color:#925c0f}.small{font-size:12px;line-height:1.7;max-width:260px;overflow-wrap:anywhere}
+progress{display:block;width:110px;height:8px;margin-top:8px;accent-color:#d09b3c}.notes{padding:20px 26px;background:#e5edf1;border-radius:14px}
+.notes li{margin:8px 0;line-height:1.6}footer{margin-top:28px;font-size:12px;color:#526674}
+@media(max-width:700px){main{padding:24px 16px}h1{font-size:30px}.cards{grid-template-columns:repeat(2,1fr)}th,td{padding:12px 10px}}
+</style></head><body><main>
+<div class="eyebrow">Small tools / Data quality</div><h1>Know your CSV before you use it.</h1>
+<p class="muted">Local analysis of <strong>orders.csv</strong>. No cloud uploads. No external scripts.</p>
+<div class="cards"><section class="card"><span>Data rows</span><strong>12</strong></section><section class="card"><span>Columns</span><strong>6</strong></section><section class="card"><span>Missing cells</span><strong>4</strong></section><section class="card"><span>Duplicate rows after first</span><strong>1</strong></section></div><h2>Column-by-column profile</h2><div class="table-wrap"><table>
+<thead><tr><th scope="col">Column</th><th scope="col">Suggested type</th><th scope="col">Missing</th><th scope="col">Distinct</th><th scope="col">Most frequent values</th><th scope="col">Numeric summary</th></tr></thead>
+<tbody><tr><td class="name">order_id</td><td><span class="tag">numeric</span></td>
+<td>0 <span class="muted">(0.0%)</span><progress max="100" value="0.0"></progress></td>
+<td>11</td><td class="small">1011 <span class="muted">× 2</span><br>1001 <span class="muted">× 1</span><br>1002 <span class="muted">× 1</span></td><td class="small">Min: 1001<br>Max: 1011<br>Mean: 1006.4167</td></tr><tr><td class="name">region</td><td><span class="tag">text/mixed</span></td>
+<td>1 <span class="muted">(8.33%)</span><progress max="100" value="8.33"></progress></td>
+<td>4</td><td class="small">South <span class="muted">× 4</span><br>North <span class="muted">× 3</span><br>West <span class="muted">× 2</span></td><td class="small">—</td></tr><tr><td class="name">product</td><td><span class="tag">text/mixed</span></td>
+<td>0 <span class="muted">(0.0%)</span><progress max="100" value="0.0"></progress></td>
+<td>4</td><td class="small">Bottle <span class="muted">× 4</span><br>Notebook <span class="muted">× 3</span><br>Pen <span class="muted">× 3</span></td><td class="small">—</td></tr><tr><td class="name">quantity</td><td><span class="tag">numeric</span></td>
+<td>1 <span class="muted">(8.33%)</span><progress max="100" value="8.33"></progress></td>
+<td>7</td><td class="small">2 <span class="muted">× 4</span><br>1 <span class="muted">× 2</span><br>3 <span class="muted">× 1</span></td><td class="small">Min: 1<br>Max: 10<br>Mean: 3.6363636</td></tr><tr><td class="name">unit_price</td><td><span class="tag">numeric</span></td>
+<td>1 <span class="muted">(8.33%)</span><progress max="100" value="8.33"></progress></td>
+<td>4</td><td class="small">350.00 <span class="muted">× 4</span><br>20.00 <span class="muted">× 3</span><br>120.00 <span class="muted">× 2</span></td><td class="small">Min: 20.00<br>Max: 950.00<br>Mean: 327.27273</td></tr><tr><td class="name">order_date</td><td><span class="tag">text/mixed</span></td>
+<td>1 <span class="muted">(8.33%)</span><progress max="100" value="8.33"></progress></td>
+<td>5</td><td class="small">2026-09-05 <span class="muted">× 3</span><br>2026-09-01 <span class="muted">× 2</span><br>2026-09-02 <span class="muted">× 2</span></td><td class="small">—</td></tr></tbody></table></div><h2>How to read this report</h2><div class="notes"><ul><li>Whitespace around fields is stripped for all statistics and duplicate checks.</li><li>Only empty/whitespace-only fields are missing; NA, null, zero, and False are not missing.</li><li>Numeric types are suggestions, not schemas; identifiers with leading zeros may look numeric.</li><li>Numeric means use Decimal precision 34 and are rounded to 8 significant digits.</li><li>Reports include column names and top values. Treat reports as potentially sensitive.</li></ul>
+<p>Blank records skipped: 0. This tool reports observations; it does not clean or change your CSV.</p></div>
+<footer>CSV Quality Report · Python standard library · Prepared for Shikhar Singh</footer></main></body></html>
