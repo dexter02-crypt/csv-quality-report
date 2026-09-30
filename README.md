@@ -65,7 +65,7 @@ as text. The tool reports problems; it does not silently repair your dataset.
 ## License and provenance
 
 MIT. Synthetic sample data was created for this project. Prepared for
-Shikhar Singh with ChatGPT assistance; see [docs/PROVENANCE.md](docs/PROVENANCE.md).
+Shikhar Singh; see [docs/PROVENANCE.md](docs/PROVENANCE.md).
 Official references: [Python csv](https://docs.python.org/3/library/csv.html),
 [Decimal](https://docs.python.org/3/library/decimal.html), and
 [HTML escaping](https://docs.python.org/3/library/html.html#html.escape).
