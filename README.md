@@ -44,6 +44,17 @@ Whitespace is trimmed. Empty/whitespace-only cells count as missing, but
 such as `00123` may look numeric. Decimal means are rounded to eight
 significant digits, not guaranteed exact financial accounting.
 
+## Compare two CSV snapshots
+
+Use the comparison helper to detect added/removed columns, suggested-type changes, missing-rate shifts, distinct-value shifts, and row-count changes:
+
+```bash
+python3 compare_csv.py examples/orders.csv examples/orders-next.csv --output-dir outputs/compare-demo
+open outputs/compare-demo/comparison.html
+```
+
+The comparison reports observations. It does not infer business meaning or automatically declare a schema change safe.
+
 ## Tests
 
 ```bash

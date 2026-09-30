@@ -1,0 +1,5 @@
+order_id,region,units,price,status,priority
+A1001,West,5,19.5,paid,normal
+A1002,North,3,12.0,paid,normal
+A1003,East,8,7.5,pending,high
+A1004,West,,19.5,paid,normal

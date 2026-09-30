@@ -1,0 +1,33 @@
+{
+  "before": "orders.csv",
+  "after": "orders-next.csv",
+  "added_columns": [
+    "price",
+    "priority",
+    "status",
+    "units"
+  ],
+  "removed_columns": [
+    "order_date",
+    "product",
+    "quantity",
+    "unit_price"
+  ],
+  "changed_columns": [
+    {
+      "column": "order_id",
+      "kind": {
+        "before": "numeric",
+        "after": "text/mixed"
+      },
+      "distinct_nonempty_delta": -7
+    },
+    {
+      "column": "region",
+      "missing_percent_delta": -8.33,
+      "distinct_nonempty_delta": -1
+    }
+  ],
+  "row_delta": -8,
+  "duplicate_row_delta": -1
+}
