@@ -51,7 +51,11 @@ Coverage includes:
 - package version identity for v1.1.0
 - real comparison-CLI execution, HTML/JSON output creation and source-file preservation
 
-The release-candidate workflow additionally includes Python 3.12 on both Ubuntu and macOS, expanding the configured matrix from six to eight jobs. Those two new jobs require fresh remote CI evidence before release.
+Release-preparation commit `c6d2bdbcdaec085e42714f31dc462535bae9b1dc` expanded the matrix to Python 3.11, 3.12, 3.13 and 3.14 on both Ubuntu and macOS.
+
+Push run `36861674114` and pull-request run `36861729732` each completed all eight jobs successfully. This establishes hosted CI evidence for the expanded matrix on that exact implementation candidate.
+
+Later documentation-only evidence updates still require their own fresh CI before integration.
 
 ## Demonstration
 

@@ -27,7 +27,20 @@ That run completed successfully across six jobs:
 
 The release-candidate local suite contains 24 unit and CLI-level test methods covering sample metrics, UTF-8/BOM handling, Unicode, quoted fields/newlines, malformed rows, numeric boundaries, HTML escaping, input limits, output preservation, package-version identity, CSV-profile comparison behavior, and real comparison-CLI execution.
 
-The release-candidate workflow adds Python 3.12 to the Ubuntu/macOS matrix. That new eight-job matrix is not treated as passing evidence until the release branch runs successfully on GitHub Actions.
+Release-preparation commit `c6d2bdbcdaec085e42714f31dc462535bae9b1dc` passed GitHub Actions push run `36861674114` and pull-request run `36861729732`.
+
+Each run completed successfully across the full eight-job matrix:
+
+- Ubuntu / Python 3.11
+- Ubuntu / Python 3.12
+- Ubuntu / Python 3.13
+- Ubuntu / Python 3.14
+- macOS / Python 3.11
+- macOS / Python 3.12
+- macOS / Python 3.13
+- macOS / Python 3.14
+
+Any later release-evidence-only commit must still pass fresh CI before merge and tagging.
 
 ## Scope
 
