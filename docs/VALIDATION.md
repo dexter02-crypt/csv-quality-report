@@ -1,31 +1,79 @@
 # Validation record
 
-## Executed here
+## Public implementation baseline
 
-- Environment: Linux, CPython 3.13.5.
-- Command: `python -B -m unittest discover -s tests -v`.
-- Result: **18 tests passed**, zero failed, zero skipped.
-- Full captured test output: [test-output.txt](test-output.txt).
+Repository: `dexter02-crypt/csv-quality-report`
 
-The application and its tests use Python standard-library modules only.
+Baseline `main` commit:
 
-The included `setup.sh` was also executed in a fresh, isolated project copy: it created a new virtual environment and passed all tests without third-party dependencies.
+`e450105056a164eb57e429885126f55d5e791769`
 
-## Actual demonstration
+GitHub Actions run `36764877890` completed successfully on that exact commit.
 
-The supplied synthetic CSV produces 12 rows, six columns, four missing cells and one duplicate row after the first occurrence. `docs/example-report/report.html` and `report.json` are actual application outputs. `docs/demo.png` was rendered from that generated HTML using headless Chromium in-memory; it is not a Mac/browser-installation test. The HTML contains six rendered column-summary rows and no scripts.
+The six successful jobs were:
+
+- macOS / Python 3.11
+- macOS / Python 3.13
+- macOS / Python 3.14
+- Ubuntu / Python 3.11
+- Ubuntu / Python 3.13
+- Ubuntu / Python 3.14
+
+Each job checked out the repository, configured Python, processed the dependency file and ran:
+
+`python -m unittest discover -s tests -v`
+
+## Test coverage
+
+The release-candidate local suite contains **24 test methods**.
+
+Coverage includes:
+
+- expected metrics from the synthetic example
+- numeric summaries and zero handling
+- missing-value semantics
+- whitespace-normalized duplicate detection
+- header-only and blank-record behavior
+- UTF-8 BOM and Unicode input
+- quoted commas and embedded newlines
+- alternate delimiters
+- invalid/duplicate headers
+- malformed and ragged records
+- row, column and byte limits
+- invalid delimiters
+- non-finite and expression-like numeric text
+- HTML escaping and restrictive CSP output
+- JSON/HTML output round-trip
+- refusal to overwrite existing output directories
+- input preservation and real profile CLI execution
+- invalid encoding rejection
+- snapshot comparison for column additions/removals, type changes, missing-rate shifts and row-count changes
+- package version identity for v1.1.0
+- real comparison-CLI execution, HTML/JSON output creation and source-file preservation
+
+Release-preparation commit `c6d2bdbcdaec085e42714f31dc462535bae9b1dc` expanded the matrix to Python 3.11, 3.12, 3.13 and 3.14 on both Ubuntu and macOS.
+
+Push run `36861674114` and pull-request run `36861729732` each completed all eight jobs successfully. This establishes hosted CI evidence for the expanded matrix on that exact implementation candidate.
+
+Later documentation-only evidence updates still require their own fresh CI before integration.
+
+## Demonstration
+
+The supplied synthetic `examples/orders.csv` produces:
+
+- 12 data rows
+- 6 columns
+- 4 missing cells
+- 1 duplicate row after the first occurrence
+
+`docs/example-report/` contains generated report artifacts and `docs/demo.png` shows the generated HTML example.
 
 ## Boundaries
 
-macOS installation, your local GUI/file-opening behavior, successful live webcam
-capture, real GitHub publication and GitHub Actions execution have **not** been
-verified by this record. The workflow requests multiple Python/OS combinations;
-that configuration is not evidence that those jobs ran. No measured detection
-accuracy, production-readiness or universal input-correctness claim is made.
-These are author-run tests, not independent certification.
+The application uses Python standard-library modules only.
 
-## Your local verification
+It accepts UTF-8 CSV input and does not parse Excel workbooks or guess delimiters. Default limits are 20 MiB, 100,000 nonblank records and 200 columns. Data is retained in memory within those limits.
 
-Run setup and the sample on your own machine. Once the repository is published,
-record your actual OS/Python versions, the command, its real result, and one
-small change you understand. Do not rewrite unexecuted checks as passing checks.
+HTML output escapes dynamic values and contains no application JavaScript or external assets. The tool reports observations and does not silently repair the source dataset.
+
+GitHub Actions evidence demonstrates the listed hosted runner/Python combinations only. It is not proof of universal input correctness, performance on arbitrary data, production readiness or business meaning of detected changes.
