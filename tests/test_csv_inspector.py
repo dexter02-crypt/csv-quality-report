@@ -4,9 +4,13 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import csv_inspector
 from csv_inspector.core import numeric_value, profile_csv, render_html, save_report
 ROOT=Path(__file__).resolve().parents[1]
 class CsvTests(unittest.TestCase):
+    def test_package_version_matches_release(self):
+        self.assertEqual(csv_inspector.__version__, "1.1.0")
+
     def make_report(self,text,**kwargs):
         with tempfile.TemporaryDirectory() as tmp:
             path=Path(tmp)/'test.csv'; path.write_text(text,encoding='utf-8')
